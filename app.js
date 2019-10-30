@@ -2,8 +2,11 @@ const express = require('express');
 
 const app = express();
 
+// setting view engine
+app.set('view engine','ejs')
+
 app.get('/',function(request,response){
-response.send('Hello from server');
+response.send('about.ejs');
 });
 
 app.listen(3000,function(){
